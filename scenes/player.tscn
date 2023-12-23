@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://pynj64abplnb"]
+
+[ext_resource type="Texture2D" uid="uid://cfykek58bn6kr" path="res://sprites/player/Owlet_Monster.png" id="1_c6nmn"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_f0t18"]
+[ext_resource type="PackedScene" uid="uid://cnsyl17tjocp7" path="res://scenes/control.tscn" id="3_4rt25"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5jyvd"]
+radius = 24.0
+height = 78.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_f0t18")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32, 28.5)
+scale = Vector2(3, 2.78125)
+texture = ExtResource("1_c6nmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 36)
+shape = SubResource("CapsuleShape2D_5jyvd")
+
+[node name="HUD" parent="." instance=ExtResource("3_4rt25")]

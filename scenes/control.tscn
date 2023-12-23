@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnsyl17tjocp7"]
+
+[ext_resource type="Texture2D" uid="uid://da8n3x6l8k0yk" path="res://sprites/HUD/arrow.png" id="1_whdu8"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(3, 550)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_whdu8")
+passby_press = true
+action = "ui_left"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(213, 643)
+rotation = 3.14159
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_whdu8")
+passby_press = true
+action = "ui_right"
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+position = Vector2(1153, 489)
+rotation = 1.5708
+scale = Vector2(5, 5)
+texture_normal = ExtResource("1_whdu8")
+passby_press = true
+action = "ui_accept"
